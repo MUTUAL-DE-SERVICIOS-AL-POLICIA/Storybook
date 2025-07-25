@@ -1,22 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
-import { ButtonEdit } from "@/components";
+import { HeaderManage } from "@/components";
 
 const meta = {
-  title: "ButtonEdit",
-  component: ButtonEdit,
+  title: "HeaderManage",
+  component: HeaderManage,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
-} satisfies Meta<typeof ButtonEdit>;
+} satisfies Meta<typeof HeaderManage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Test: Story = {
   args: {
-    onPress: () => {},
+    toRegister: true,
+    toEdit: true,
+    switchEdit: () => {},
     isEdit: false,
   },
 };

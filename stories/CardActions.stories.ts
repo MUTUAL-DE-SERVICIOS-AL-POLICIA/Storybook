@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+
 import { CardActions } from "@/components";
 
 const meta = {
@@ -8,7 +9,6 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-
 } satisfies Meta<typeof CardActions>;
 
 export default meta;
@@ -32,7 +32,6 @@ export const Test: Story = {
     sizeTextBody: "text-sm",
   },
 };
-
 
 export const Simple: Story = {
   args: {
