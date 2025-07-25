@@ -3,7 +3,9 @@
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
 import { useState } from "react";
+
 import { ModalAlert } from ".";
+
 import { GarbageIcon } from "@/components";
 
 interface Props {
@@ -29,14 +31,14 @@ export const CardActions = ({
   textLoading,
   textHover,
   isEdit = false,
-  activeId= "0",
+  activeId = "0",
   dataId,
   isLoading = false,
   onPress = () => {},
   onDelete = false,
   removeData = () => {},
-  height= "min-h-[auto]",
-  sizeTextBody= "text-sm",
+  height = "min-h-[auto]",
+  sizeTextBody = "text-sm",
 }: Props) => {
   const [openModalAlert, setOpenModalAlert] = useState(false);
 

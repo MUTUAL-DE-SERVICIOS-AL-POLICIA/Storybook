@@ -1,6 +1,7 @@
 import { Divider } from "@heroui/divider";
-import { ButtonEdit, ButtonRegister } from "./";
 import React from "react";
+
+import { ButtonEdit, ButtonRegister } from "./";
 
 interface Props {
   toRegister?: boolean;
@@ -11,14 +12,16 @@ interface Props {
 }
 
 export const HeaderManage = ({
-  toRegister=false,
-  toEdit=false,
+  toRegister = false,
+  toEdit = false,
   switchEdit,
   isEdit,
-  componentRegister=<ButtonRegister textTop="crear/actualizar" isDisabled={isEdit} />,
+  componentRegister = (
+    <ButtonRegister isDisabled={isEdit} textTop="crear/actualizar" />
+  ),
 }: Props) => {
   if (!(toRegister || toEdit)) return null;
-  
+
   return (
     <>
       <div className="flex justify-end items-center gap-1">

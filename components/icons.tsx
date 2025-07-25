@@ -7,7 +7,12 @@ export const MuserpolLogo = () => (
     <image height="80" href="muserpol-logo.png" width="180" x="10" y="-8" />
   </svg>
 );
-export const Logo: React.FC<IconSvgProps> = ({ size, width, height, ...props }) => {
+export const Logo: React.FC<IconSvgProps> = ({
+  size,
+  width,
+  height,
+  ...props
+}) => {
   const finalSize = size ?? width ?? height;
   const finalWidth = width ?? finalSize;
   const finalHeight = height ?? finalSize;
@@ -20,14 +25,30 @@ export const Logo: React.FC<IconSvgProps> = ({ size, width, height, ...props }) 
       width={finalWidth}
       {...props}
     >
-      <image height={finalHeight} href="/muserpol-logo.png" width={finalWidth} x="0" y="0" />
+      <image
+        height={finalHeight}
+        href="/muserpol-logo.png"
+        width={finalWidth}
+        x="0"
+        y="0"
+      />
     </svg>
   );
 };
 
-export const DiscordIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, ...props }) => {
+export const DiscordIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
   return (
-    <svg height={size || height} viewBox="0 0 24 24" width={size || width} {...props}>
+    <svg
+      height={size || height}
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
       <path
         d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1 14.66 14.66 0 0 0-4.58 0 10.14 10.14 0 0 0-.53-1.1 16 16 0 0 0-4.13 1.3 17.33 17.33 0 0 0-3 11.59 16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83 3.39 3.39 0 0 0 .42-.33 11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84 12.41 12.41 0 0 0 1.08 1.78 16.44 16.44 0 0 0 5.06-2.59 17.22 17.22 0 0 0-3-11.59 16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.93 1.93 0 0 1 1.8 2 1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2 1.93 1.93 0 0 1 1.8-2 1.92 1.92 0 0 1 1.8 2 1.92 1.92 0 0 1-1.8 2z"
         fill="currentColor"
@@ -36,7 +57,12 @@ export const DiscordIcon: React.FC<IconSvgProps> = ({ size = 24, width, height, 
   );
 };
 
-export const MoonFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
+export const MoonFilledIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -53,7 +79,12 @@ export const MoonFilledIcon = ({ size = 24, width, height, ...props }: IconSvgPr
   </svg>
 );
 
-export const SunFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
+export const SunFilledIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -70,7 +101,12 @@ export const SunFilledIcon = ({ size = 24, width, height, ...props }: IconSvgPro
   </svg>
 );
 
-export const HeartFilledIcon = ({ size = 24, width, height, ...props }: IconSvgProps) => (
+export const HeartFilledIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconSvgProps) => (
   <svg
     aria-hidden="true"
     focusable="false"
@@ -96,7 +132,12 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
   height?: number;
 }
 
-export const VerticalDotsIcon = ({ size = 24, width, height, ...props }: IconProps) => (
+export const VerticalDotsIcon = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}: IconProps) => (
   <svg
     aria-hidden="true"
     fill="none"
@@ -143,7 +184,14 @@ export const SearchIcon = (props: IconSvgProps) => (
 );
 
 export const PersonInfoIcon = (props: IconSvgProps) => (
-  <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" {...props}>
+  <svg
+    fill="none"
+    height="24"
+    viewBox="0 0 24 24"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
     <circle cx="9" cy="9" r="2" stroke="green" strokeWidth="1.5" />
     <path
       d="M13 15C13 16.1046 13 17 9 17C5 17 5 16.1046 5 15C5 13.8954 6.79086 13 9 13C11.2091 13 13 13.8954 13 15Z"
@@ -156,9 +204,24 @@ export const PersonInfoIcon = (props: IconSvgProps) => (
       strokeLinecap="round"
       strokeWidth="1.5"
     />
-    <path d="M19 12H15" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" />
-    <path d="M19 9H14" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" />
-    <path d="M19 15H16" stroke="currentColor" strokeLinecap="round" strokeWidth="1.5" />
+    <path
+      d="M19 12H15"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M19 9H14"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.5"
+    />
+    <path
+      d="M19 15H16"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeWidth="1.5"
+    />
   </svg>
 );
 
@@ -225,7 +288,13 @@ export const TouchIndiceIcon = (props: IconSvgProps) => (
       strokeLinejoin="round"
       strokeWidth="4"
     />
-    <path d="M24 44V31" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" />
+    <path
+      d="M24 44V31"
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="4"
+    />
     <path
       d="M24 24.625V21.875"
       stroke="currentColor"
@@ -633,17 +702,30 @@ export const DocumentViewIcon = (props: IconSvgProps) => {
       width="24px"
       {...props}
     >
-      <polyline points="19,3 19,9 25,9 19,3 7,3 7,29 25,29 25,22.7" {...strokeProps} />
+      <polyline
+        points="19,3 19,9 25,9 19,3 7,3 7,29 25,29 25,22.7"
+        {...strokeProps}
+      />
       <circle cx="21" cy="19" r="2" {...strokeProps} />
       <line x1="25" x2="25" y1="9" y2="15" {...strokeProps} />
-      <path d="M29,19c0,0-3.6,5-8,5s-8-5-8-5s3.6-5,8-5S29,19,29,19z" {...strokeProps} />
+      <path
+        d="M29,19c0,0-3.6,5-8,5s-8-5-8-5s3.6-5,8-5S29,19,29,19z"
+        {...strokeProps}
+      />
     </svg>
   );
 };
 
 export const CopyIcon = (props: IconSvgProps) => {
   return (
-    <svg aria-hidden="true" fill="none" height="24" viewBox="0 0 24 24" width="18" {...props}>
+    <svg
+      aria-hidden="true"
+      fill="none"
+      height="24"
+      viewBox="0 0 24 24"
+      width="18"
+      {...props}
+    >
       <path
         d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
         stroke="currentColor"
@@ -874,8 +956,8 @@ export const RegisterIcon = (props: IconSvgProps) => {
       {...props}
     >
       <g>
-        <path d="M66,42H54V30a6,6,0,0,0-12,0V42H30a6,6,0,0,0,0,12H42V66a6,6,0,0,0,12,0V54H66a6,6,0,0,0,0-12Z"/>
-        <path d="M48,0A48,48,0,1,0,96,48,48.0512,48.0512,0,0,0,48,0Zm0,84A36,36,0,1,1,84,48,36.0393,36.0393,0,0,1,48,84Z"/>
+        <path d="M66,42H54V30a6,6,0,0,0-12,0V42H30a6,6,0,0,0,0,12H42V66a6,6,0,0,0,12,0V54H66a6,6,0,0,0,0-12Z" />
+        <path d="M48,0A48,48,0,1,0,96,48,48.0512,48.0512,0,0,0,48,0Zm0,84A36,36,0,1,1,84,48,36.0393,36.0393,0,0,1,48,84Z" />
       </g>
     </svg>
   );
@@ -893,10 +975,13 @@ export const EditIcon = (props: IconSvgProps) => {
       width="18px"
       {...props}
     >
-      <path fillRule="evenodd" clipRule="evenodd" d="m3.99 16.854-1.314 3.504a.75.75 0 0 0 .966.965l3.503-1.314a3 3 
+      <path
+        clipRule="evenodd"
+        d="m3.99 16.854-1.314 3.504a.75.75 0 0 0 .966.965l3.503-1.314a3 3 
         0 0 0 1.068-.687L18.36 9.175s-.354-1.061-1.414-2.122c-1.06-1.06-2.122-1.414-2.122-1.414L4.677 15.786a3 3 0 0 0-.687 
         1.068zm12.249-12.63 1.383-1.383c.248-.248.579-.406.925-.348.487.08 1.232.322 1.934 1.025.703.703.945 1.447 1.025 
         1.934.058.346-.1.677-.348.925L19.774 7.76s-.353-1.06-1.414-2.12c-1.06-1.062-2.121-1.415-2.121-1.415z"
+        fillRule="evenodd"
       />
     </svg>
   );

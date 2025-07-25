@@ -1,5 +1,6 @@
 import { Button } from "@heroui/button";
 import { Tooltip } from "@heroui/tooltip";
+
 import { RegisterIcon } from "@/components";
 
 export interface Props {
@@ -15,10 +16,14 @@ export const ButtonRegister = ({
   textTop,
   isDisabled = false,
 }: Props) => {
-
   return (
     <Tooltip content={textTop}>
-      <Button endContent={<RegisterIcon />} isLoading={isLoading} onPress={onPress} isDisabled={isDisabled}>
+      <Button
+        endContent={<RegisterIcon />}
+        isDisabled={isDisabled}
+        isLoading={isLoading}
+        onPress={onPress}
+      >
         REGISTRAR
       </Button>
     </Tooltip>

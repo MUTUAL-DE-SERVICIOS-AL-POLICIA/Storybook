@@ -1,6 +1,12 @@
 "use client";
 
-import { Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "@heroui/modal";
+import {
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+} from "@heroui/modal";
 import { Button } from "@heroui/button";
 
 interface Props {
@@ -25,7 +31,12 @@ export function ModalAlert({
   loading = false,
 }: Props) {
   return (
-    <Modal hideCloseButton isDismissable={false} isOpen={isOpen} onOpenChange={onClose}>
+    <Modal
+      hideCloseButton
+      isDismissable={false}
+      isOpen={isOpen}
+      onOpenChange={onClose}
+    >
       <ModalContent>
         {(close) => (
           <>
